@@ -1,12 +1,15 @@
-#include <iostream>
-#include "Node.h"
-#include <tuple>
-#include <type_traits>
+#include "Operator.h"
 
-Operator<int, int, int, int, int, int, int> o = Operator<int, int, int, int, int, int, int>( "+", 0, 1, 2, 3, 4, 5, 6 );
+#define n( a ) new int( a )
+
+//Operator<int*, int*, int*, int*, int*, int*, int*> o = Operator<int*, int*, int*, int*, int*, int*, int*>( "+", n( 0 ), n( 1 ), n( 2 ), n( 3 ), n( 4 ), n( 5 ), n( 6 ) );
+
+Plus<Node *, Node *> p = Plus<Node *, Node *>( new Const<int>( 0 ), new Var( "x" ) );
 
 int main()
 {
-	cout << get<0>( o.Children ) << endl;
+	Node *n = p.Simplify();
+	Node np = *n;
+	return 0;
 }
 

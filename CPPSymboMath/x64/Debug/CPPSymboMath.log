@@ -1,2 +1,7 @@
 ﻿  CPPSymboMath.cpp
-  CPPSymboMath.vcxproj -> C:\Users\FVP\Documents\programming\cpp\CPPSymboMath\x64\Debug\CPPSymboMath.exe
+C:\Users\FVP\Documents\programming\cpp\CPPSymboMath\CPPSymboMath\Operator.h(41,2): error C2512: 'Operator<Node *,Node *>': no appropriate default constructor available
+C:\Users\FVP\Documents\programming\cpp\CPPSymboMath\CPPSymboMath\Operator.h(37,9): message : see declaration of 'Operator<Node *,Node *>'
+C:\Users\FVP\Documents\programming\cpp\CPPSymboMath\CPPSymboMath\Operator.h(40): message : while compiling class template member function 'Plus<Node *,Node *>::Plus(Node *,Node *)'
+C:\Users\FVP\Documents\programming\cpp\CPPSymboMath\CPPSymboMath\CPPSymboMath.cpp(7): message : see reference to function template instantiation 'Plus<Node *,Node *>::Plus(Node *,Node *)' being compiled
+C:\Users\FVP\Documents\programming\cpp\CPPSymboMath\CPPSymboMath\CPPSymboMath.cpp(7): message : see reference to class template instantiation 'Plus<Node *,Node *>' being compiled
+C:\Users\FVP\Documents\programming\cpp\CPPSymboMath\CPPSymboMath\Operator.h(40,22): error C2614: 'Plus<Node *,Node *>': illegal member initialization: 'Operator' is not a base or member

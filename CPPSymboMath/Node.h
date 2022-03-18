@@ -5,6 +5,7 @@
 #include <string>
 #include <iostream>
 #include <tuple>
+#include <map>
 
 using std::string;
 using std::cout;
@@ -20,6 +21,11 @@ public:
 	}
 
 	string s;
+
+	virtual void Print()
+	{
+
+	}
 };
 
 template<typename T>
@@ -43,18 +49,21 @@ public:
 	}
 };
 
-enum class FunctionType
-{
-	Abs, Acos, Asin, Atan, Sqrt, Cos, Exp, Pow, Sin, Tan
-};
+#define MapElement( a ) {FuncType::a, "a"}
 
-class Function
+enum class FuncType : char
+{
+	Sin, Cos, Tan,
+	Sqrt, Ln
+};
+std::map<FuncType, string> GetFunctionString{ MapElement( Sin ), MapElement( Cos ), MapElement( Tan ), MapElement( Sqrt ), MapElement( Ln ) };
+
+class Func
 	: public Node
 {
 public:
-	Function( string s ) : Node( s )
+	Func( FuncType f ) : Node( GetFunctionString[ f ] )
 	{
-		
 	}
 };
 
